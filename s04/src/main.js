@@ -1,5 +1,6 @@
 import Handlebars from "handlebars";
 import './ajax';
+import { data, PI } from './data'
 
 const studentTmpl = document.querySelector('#studentTmpl')
 const students = [
