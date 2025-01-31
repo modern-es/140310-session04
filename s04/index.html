@@ -31,6 +31,28 @@
     </table>
   </script>
 
+  <script id="postsTmpl" type="text/template">
+    <table>
+      <thead>
+        <tr>
+          <td>Id</td>
+          <td>Title</td>          
+          <td>Body</td>
+        </tr>
+      </thead>
+      <tbody>
+        {{#each data}}
+        <tr>
+          <td>{{id}}</td>
+          <td>{{title}}</td>
+          <td>{{body}}</td>
+        </tr>
+        {{/each}}
+      </tbody>
+    </table>
+  </script>
+
+  <div id="posts"></div>
   <div id="app"></div>
   <script type="module" src="/src/main.js"></script>
   <!-- <script type="module" src="/src/ajax.js"></script> -->

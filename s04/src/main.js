@@ -20,4 +20,4 @@ const html = template({ data: students });
 
 const app = document.querySelector('#app')
 app.innerHTML = html;
-console.log(html)
+// console.log(html)
