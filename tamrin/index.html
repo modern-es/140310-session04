@@ -34,6 +34,7 @@
   <script>
     const buttonAddElem = document.querySelector('#btn-add-person');
     const personsContainerElem = document.querySelector('#persons-container')
+    const buttonSaveElem = document.querySelector('#btn-save')
 
     buttonAddElem.addEventListener('click', e => {
       const tr = document.createElement('tr');
@@ -50,6 +51,20 @@
         if (confirm('are you sure?'))
           tr.remove();
       })
+    });
+
+    buttonSaveElem.addEventListener('click', e => {
+      let persons = [];
+      personsContainerElem.querySelectorAll('tr').forEach(tr => {
+        let person = {
+          firstName: tr.querySelector('[name="first_name"]').value,
+          lastName: tr.querySelector('[name="last_name"]').value,
+          email: tr.querySelector('[name="email"]').value,
+          age: tr.querySelector('[name="age"]').value,
+        }
+        persons.push(person);
+      })
+      console.log(persons)
     })
   </script>
 </body>
