@@ -1,0 +1,11 @@
+install nodejs
+    https://nodejs.org/dist/v22.13.1/node-v22.13.1-x64.msi
+
+npm create vite
+    project name: s04
+    framework: vanilla
+    language: javascript
+
+
+cd s04
+npm i  - npm install 
