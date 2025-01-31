@@ -23,13 +23,7 @@
         <th></th>
       </thead>
       <tbody id="persons-container">
-        <tr id="tr0">
-          <td><input type="text" name="first_name" /></td>
-          <td><input type="text" name="last_name" /></td>
-          <td><input type="text" name="email" /></td>
-          <td><input type="text" name="age" /></td>
-          <td><a href="#" onclick="remove(0);">Remove</a></td>
-        </tr>
+
       </tbody>
     </table>
     <hr />
@@ -50,8 +44,12 @@
           <td><input type="text" name="age" /></td>
           <td><a href="#">Remove</a></td>`;
 
-      personsContainerElem.appendChild(tr)
+      personsContainerElem.appendChild(tr);
 
+      tr.querySelector('a').addEventListener('click', e => {
+        if (confirm('are you sure?'))
+          tr.remove();
+      })
     })
   </script>
 </body>
