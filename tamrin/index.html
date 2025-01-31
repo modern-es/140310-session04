@@ -32,6 +32,9 @@
 
   </div>
   <script>
+    const data = JSON.parse(localStorage.getItem("data") || "[]")
+    console.log(data)
+
     const buttonAddElem = document.querySelector('#btn-add-person');
     const personsContainerElem = document.querySelector('#persons-container')
     const buttonSaveElem = document.querySelector('#btn-save')
