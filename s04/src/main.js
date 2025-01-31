@@ -1,4 +1,6 @@
 import Handlebars from "handlebars";
+import './ajax';
+
 const studentTmpl = document.querySelector('#studentTmpl')
 const students = [
     { name: 'Alireza Abolhasani' },

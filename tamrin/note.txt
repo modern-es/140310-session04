@@ -14,3 +14,24 @@ npm i  - npm install
 run: npm run dev
 
 build: npm run build
+
+
+---
+sync / async
+
+    sync -> (blocking I/O)
+        let data = getData();
+        data
+
+    async - > (non blocking I/O)
+        let result = 1+1;
+        result
+
+        //Promise
+        fetch('xyz.com/api/user')
+            .then((data) => {
+                ///
+            })
+        data ??
+
+    async/await
