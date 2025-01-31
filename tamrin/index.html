@@ -64,7 +64,12 @@
         }
         persons.push(person);
       })
-      console.log(persons)
+      console.log(JSON.stringify(persons))
+      //serialize
+      //deserialize
+      localStorage.setItem("data", JSON.stringify(persons))
+
+      // JSON.parse()
     })
   </script>
 </body>
