@@ -6,9 +6,31 @@
   <link rel="icon" type="image/svg+xml" href="/vite.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Vite App</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
 </head>
 
 <body>
+  <script id="studentTmpl" type="text/template">
+    <table>
+      <thead>
+        <tr>
+          <td>Id</td>
+          <td>Name</td>          
+          <td>Avatar</td>
+        </tr>
+      </thead>
+      <tbody>
+        {{#each data}}
+        <tr>
+          <td>{{@index}}</td>
+          <td>{{name}}</td>
+          <td><img width="64" src="https://api.dicebear.com/9.x/micah/svg?seed={{name}}" alt=""></td>
+        </tr>
+        {{/each}}
+      </tbody>
+    </table>
+  </script>
+
   <div id="app"></div>
   <script type="module" src="/src/main.js"></script>
 </body>
