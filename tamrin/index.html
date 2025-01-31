@@ -37,7 +37,23 @@
     <a href="#" id="btn-add-person">Add Person</a>
 
   </div>
-  <script></script>
+  <script>
+    const buttonAddElem = document.querySelector('#btn-add-person');
+    const personsContainerElem = document.querySelector('#persons-container')
+
+    buttonAddElem.addEventListener('click', e => {
+      const tr = document.createElement('tr');
+      tr.innerHTML = `
+      <td><input type="text" name="first_name" /></td>
+          <td><input type="text" name="last_name" /></td>
+          <td><input type="text" name="email" /></td>
+          <td><input type="text" name="age" /></td>
+          <td><a href="#">Remove</a></td>`;
+
+      personsContainerElem.appendChild(tr)
+
+    })
+  </script>
 </body>
 
 </html>
