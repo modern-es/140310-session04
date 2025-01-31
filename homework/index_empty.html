@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css" />
+  <script src="./node_modules/handlebars/dist/handlebars.min.js"></script>
+  <title>SiteGen</title>
+</head>
+
+<body>
+  <br />
+
+  <script id="template-card" type="text/template">
+
+    </script>
+
+  <script id="template-table" type="text/template">
+    </script>
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col col-md-4">
+        Layout:
+        <div class="row">
+          <div class="col col-md-12">
+            <div class="btn-group" role="group" aria-label="Basic example">
+              <button type="button" id="btn-card" class="btn btn-secondary">Card</button>
+              <button type="button" id="btn-table" class="btn btn-secondary">Table</button>
+            </div>
+            <a>Total <span class="badge badge-primary" id="total"> 100 </span></a>
+          </div>
+        </div>
+      </div>
+      <div class="col col-md-6">
+        Filter:
+        <div class="row">
+          <div class="col col-md-4">
+            <select class="form-control" id="select-language">
+              <option value="-1">Any language</option>
+            </select>
+          </div>
+          <div class="col col-md-4">
+            <select class="form-control" id="select-license">
+              <option value="-1">Any license</option>
+            </select>
+          </div>
+          <div class="col col-md-4">
+            <select class="form-control" id="select-template">
+              <option value="-1">Any templates</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="col col-md-2">
+        Sort By:
+        <div class="row">
+          <div class="col col-md-12">
+            <select id="select-sort" class="form-control">
+              <option value="asc">Name Asc</option>
+              <option value="desc">Name Desc</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <br />
+    <br />
+
+    <div id="site-container">
+
+      <h3>Card</h3>
+      <div class="card-columns" id="cards-container">
+        <div class="card  border-dark mb-3" style="width: 18rem;">
+          <div class="card-header">
+            <h5 class="card-title">Title</h5>
+          </div>
+          <div class="card-body">
+            <p class="card-text ">
+              Description
+            </p>
+            <div style="line-height: 5px;">
+              <p><b>Language : </b><em>language</em></p>
+              <p><b>License : </b><em>license</em></p>
+              <p><b>Templates : </b><em>templates</em></p>
+            </div>
+          </div>
+          <div class="card-footer bg-transparent text-center">
+            <a target="blank" href="homepage" class="btn btn-link">Homepage</a>
+          </div>
+        </div>
+      </div>
+      <hr>
+
+      <h3>Table</h3>
+      <table class="table table-striped">
+        <thead>
+          <th>Name</th>
+          <th>Description</th>
+          <th>Language</th>
+          <th>License</th>
+          <th>Templates</th>
+        </thead>
+        <tbody>
+          <tr>
+            <td><a href="homepage">title</a></td>
+            <td>description</td>
+            <td>language</td>
+            <td>license</td>
+            <td>templates</td>
+          </tr>
+        </tbody>
+      </table>
+
+    </div>
+  </div>
+
+  <script src="data.js"></script>
+  <script>
+    console.log(data.length, data);
+    console.log(data[0]);
+  </script>
+</body>
+
+</html>
